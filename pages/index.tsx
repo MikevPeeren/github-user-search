@@ -10,7 +10,7 @@ const Home: NextPage = () => {
           name="description"
           content="Search for your favorite Github user."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon-32x32.png" />
       </Head>
 
       <main></main>
