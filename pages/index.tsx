@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import LightDarkComponent from "../components/LightDarkComponent";
+import LightDarkToggle from "../components/LightDarkToggle";
 
 const Home: NextPage = () => {
   return (
@@ -18,7 +18,7 @@ const Home: NextPage = () => {
       <main className="min-h-screen flex justify-center items-center">
         <div className="flex flex-row justify-between items-end lg:w-[730px] md:w-[573px] sm:w-[327px]">
           <h1 className="text-dm-white">devfinder</h1>
-          <LightDarkComponent />
+          <LightDarkToggle />
         </div>
         {/* Search component */}
         {/* Body component */}
