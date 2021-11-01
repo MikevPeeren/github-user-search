@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import LightDarkToggle from "../components/LightDarkToggle";
+import SearchBar from "../components/SearchBar";
 
 const Home: NextPage = () => {
   return (
@@ -15,12 +16,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon-32x32.png" />
       </Head>
 
-      <main className="min-h-screen flex justify-center items-center">
-        <div className="flex flex-row justify-between items-end lg:w-[730px] md:w-[573px] sm:w-[327px]">
+      <main className="min-h-screen flex flex-col justify-center items-center">
+        <div className="flex flex-row justify-between items-end lg:w-[730px] md:w-[573px]">
           <h1 className="text-dm-white">devfinder</h1>
           <LightDarkToggle />
         </div>
-        {/* Search component */}
+        <div className="lg:w-[730px] md:w-[573px] mt-10">
+          <SearchBar />
+        </div>
         {/* Body component */}
       </main>
 
