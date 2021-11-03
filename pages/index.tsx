@@ -6,7 +6,7 @@ import SearchBar from "../components/SearchBar";
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-dm-black-blue min-w-screen min-h-screen">
+    <div className="bg-lm-light-grey dark:bg-dm-black-blue min-w-screen min-h-screen">
       <Head>
         <title>Github User Search</title>
         <meta
@@ -17,8 +17,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="min-h-screen flex flex-col justify-center items-center">
-        <div className="flex flex-row justify-between items-end lg:w-[730px] md:w-[573px]">
-          <h1 className="text-dm-white">devfinder</h1>
+        <div className="flex flex-row justify-between items-center lg:w-[730px] md:w-[573px]">
+          <h1 className="dark:text-dm-white">devfinder</h1>
           <LightDarkToggle />
         </div>
         <div className="lg:w-[730px] md:w-[573px] mt-10">
