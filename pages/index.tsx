@@ -18,14 +18,14 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="min-w-screen min-h-screen flex flex-col justify-center items-center">
-        <div className="flex flex-row justify-between items-center 2xl:w-4/12 lg:w-6/12 md:w-8/12 w-11/12 md:mt-0 mt-4">
+        <div className="flex flex-row justify-between items-center 2xl:w-5/12 lg:w-7/12 md:w-8/12 w-11/12 md:mt-0 mt-4">
           <h1 className="dark:text-dm-white">devfinder</h1>
           <LightDarkToggle />
         </div>
-        <div className="mt-10 2xl:w-4/12 lg:w-6/12 md:w-8/12 sm:w-8/12 w-11/12">
+        <div className="mt-10 2xl:w-5/12 lg:w-7/12 md:w-8/12 sm:w-8/12 w-11/12">
           <SearchBar />
         </div>
-        <div className="mt-10 2xl:w-4/12 lg:w-6/12 md:w-8/12 sm:w-8/12 w-11/12 h-4/6">
+        <div className="mt-10 2xl:w-5/12 lg:w-7/12 md:w-8/12 sm:w-8/12 w-11/12 h-4/6">
           <ContentBlock />
         </div>
       </main>

@@ -4,7 +4,7 @@ import TWITTER from "../../public/icon-twitter.svg";
 
 const Footer = () => {
   return (
-    <footer className="grid grid-cols-1 mx-6 mb-6">
+    <footer className="grid grid-cols-1 mx-6 mb-6 lg:ml-48">
       <div className="grid gap-x-3 md:grid-cols-2 grid-cols-1">
         <div className="flex items-start py-1 text-lm-blue dark:text-dm-white">
           <svg
