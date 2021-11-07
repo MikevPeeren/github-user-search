@@ -9,6 +9,7 @@ const Footer = () => {
         <div className="flex items-start py-1 text-lm-blue dark:text-dm-white">
           <svg
             className="fill-current"
+            aria-hidden="true"
             height="20"
             width="14"
             xmlns="http://www.w3.org/2000/svg"
@@ -20,6 +21,7 @@ const Footer = () => {
         <div className="flex items-start py-1 text-lm-blue dark:text-dm-white">
           <svg
             className="fill-current"
+            aria-hidden="true"
             height="18"
             width="20"
             xmlns="http://www.w3.org/2000/svg"
@@ -33,6 +35,7 @@ const Footer = () => {
         <div className="flex items-start py-1 text-lm-blue dark:text-dm-white">
           <svg
             className="fill-current"
+            aria-hidden="true"
             height="20"
             width="20"
             xmlns="http://www.w3.org/2000/svg"
@@ -47,6 +50,7 @@ const Footer = () => {
         <div className="flex items-start py-1 text-lm-blue dark:text-dm-white">
           <svg
             className="fill-current"
+            aria-hidden="true"
             height="20"
             width="20"
             xmlns="http://www.w3.org/2000/svg"
