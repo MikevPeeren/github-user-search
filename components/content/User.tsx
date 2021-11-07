@@ -25,7 +25,14 @@ const User = ({ name, login, joined }: IUser) => {
             @{login}
           </h3>
         </div>
-        <h3 className="text-lm-grey dark:text-dm-white lg:ml-32">{joined}</h3>
+        <h3 className="text-lm-grey dark:text-dm-white lg:ml-32">
+          Joined{" "}
+          {new Date(joined).toLocaleString("en-US", {
+            weekday: "short",
+            day: "numeric",
+            year: "numeric",
+          })}
+        </h3>
       </div>
     </div>
   );
