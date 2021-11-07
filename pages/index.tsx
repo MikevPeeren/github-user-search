@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -9,13 +9,22 @@ import ContentBlock from "../components/ContentBlock";
 
 const Home: NextPage = () => {
   const [userData, setUserData] = useState();
+  const [noUser, setNoUser] = useState(false);
+
+  useEffect(() => {
+    // Default Display
+    handleSubmit("octocat");
+  }, []);
 
   const handleSubmit = async (username: string) => {
     const response = await fetch(`/api/github/${username}`);
     const data = await response.json();
 
-    console.log(data);
-    setUserData(data);
+    if (data.message) setNoUser(true);
+    else {
+      setNoUser(false);
+      setUserData(data);
+    }
   };
 
   return (
@@ -35,7 +44,7 @@ const Home: NextPage = () => {
           <LightDarkToggle />
         </div>
         <div className="mt-10 2xl:w-5/12 lg:w-7/12 md:w-8/12 sm:w-8/12 w-11/12">
-          <SearchBar handleSubmit={handleSubmit} />
+          <SearchBar handleSubmit={handleSubmit} noUser={noUser} />
         </div>
         <div className="mt-10 2xl:w-5/12 lg:w-7/12 md:w-8/12 sm:w-8/12 w-11/12 h-4/6">
           <ContentBlock userData={userData} />

@@ -5,9 +5,10 @@ import SEARCH_ICON from "../public/icon-search.svg";
 
 interface ISearchBar {
   handleSubmit: (username: string) => {};
+  noUser: boolean;
 }
 
-const SearchBar = ({ handleSubmit }: ISearchBar) => {
+const SearchBar = ({ handleSubmit, noUser }: ISearchBar) => {
   const textInput = useRef(null);
 
   const handleSubmitClick = () => {
@@ -27,9 +28,11 @@ const SearchBar = ({ handleSubmit }: ISearchBar) => {
           ref={textInput}
           placeholder="Search Github username..."
         />
-        <span className="md:mx-2 mx-1 text-error md:text-lg text-xs hidden">
-          No results
-        </span>
+        {noUser && (
+          <span className="md:mx-2 mx-1 text-error md:text-lg text-xs">
+            No results
+          </span>
+        )}
         <button
           className="rounded-xl text-lm-white dark:text-dm-white font-bold bg-dm-light-blue md:mx-2 mx-1 md:py-3 py-2 md:px-5 px-2 outline-none hover:cursor-pointer hover:bg-dm-light-blue-hover md:text-lg text-xs transition ease-in-out duration-700 "
           type="submit"
