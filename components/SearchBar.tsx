@@ -3,13 +3,18 @@ import { useRef } from "react";
 import Image from "next/image";
 import SEARCH_ICON from "../public/icon-search.svg";
 
-const SearchBar = () => {
+interface ISearchBar {
+  handleSubmit: (username: string) => {};
+}
+
+const SearchBar = ({ handleSubmit }: ISearchBar) => {
   const textInput = useRef(null);
 
-  const handleSubmit = () => {
-    // gather input data
+  const handleSubmitClick = () => {
+    handleSubmit(
+      textInput?.current?.value ? textInput?.current?.value : "undefined"
+    );
   };
-
   return (
     <div className="flex items-center h-[69px] bg-lm-white dark:bg-dm-blue shadow-xl rounded-xl overflow-hidden">
       <div className="flex flex-row justify-between flex-grow items-center md:mx-4 mx-2">
@@ -28,7 +33,7 @@ const SearchBar = () => {
         <button
           className="rounded-xl text-lm-white dark:text-dm-white font-bold bg-dm-light-blue md:mx-2 mx-1 md:py-3 py-2 md:px-5 px-2 outline-none hover:cursor-pointer hover:bg-dm-light-blue-hover md:text-lg text-xs transition ease-in-out duration-700 "
           type="submit"
-          onClick={handleSubmit}
+          onClick={handleSubmitClick}
         >
           Search
         </button>

@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import type { NextPage } from "next";
 import Head from "next/head";
 
@@ -6,6 +8,16 @@ import SearchBar from "../components/SearchBar";
 import ContentBlock from "../components/ContentBlock";
 
 const Home: NextPage = () => {
+  const [userData, setUserData] = useState();
+
+  const handleSubmit = async (username: string) => {
+    const response = await fetch(`/api/github/${username}`);
+    const data = await response.json();
+
+    console.log(data);
+    setUserData(data);
+  };
+
   return (
     <div className="bg-lm-light-grey dark:bg-dm-black-blue">
       <Head>
@@ -23,10 +35,10 @@ const Home: NextPage = () => {
           <LightDarkToggle />
         </div>
         <div className="mt-10 2xl:w-5/12 lg:w-7/12 md:w-8/12 sm:w-8/12 w-11/12">
-          <SearchBar />
+          <SearchBar handleSubmit={handleSubmit} />
         </div>
         <div className="mt-10 2xl:w-5/12 lg:w-7/12 md:w-8/12 sm:w-8/12 w-11/12 h-4/6">
-          <ContentBlock />
+          <ContentBlock userData={userData} />
         </div>
       </main>
 

@@ -4,7 +4,6 @@ const LightDarkToggle = () => {
   const [darkMode, setDarkMode] = useState<boolean | undefined>(undefined);
 
   useEffect(() => {
-    console.log(localStorage.getItem("githubProfileDarkMode"));
     if (
       localStorage.getItem("githubProfileDarkMode") === "true" ||
       (!("githubProfileDarkMode" in localStorage) &&
