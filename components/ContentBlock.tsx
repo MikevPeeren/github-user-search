@@ -11,6 +11,10 @@ interface IContentBlock {
     public_repos: string;
     followers: string;
     following: string;
+    company: string;
+    blog: string;
+    location: string;
+    twitter_username: string;
   };
 }
 
@@ -30,7 +34,12 @@ const ContentBlock = ({ userData }: IContentBlock) => {
         followers={userData?.followers}
         following={userData?.following}
       />
-      <Footer />
+      <Footer
+        blog={userData?.blog}
+        location={userData?.location}
+        twitter={userData?.twitter_username}
+        company={userData?.company}
+      />
     </div>
   );
 };
