@@ -4,7 +4,18 @@ const LightDarkToggle = () => {
   const [darkMode, setDarkMode] = useState<boolean | undefined>(undefined);
 
   useEffect(() => {
-    setDarkMode(document.documentElement.classList.contains("dark"));
+    console.log(localStorage.getItem("githubProfileDarkMode"));
+    if (
+      localStorage.getItem("githubProfileDarkMode") === "true" ||
+      (!("githubProfileDarkMode" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+      setDarkMode(true);
+    } else {
+      document.documentElement.classList.remove("dark");
+      setDarkMode(false);
+    }
   }, []);
 
   useEffect(() => {
