@@ -8,6 +8,9 @@ interface IContentBlock {
     login: string;
     created_at: string;
     bio: string;
+    public_repos: string;
+    followers: string;
+    following: string;
   };
 }
 
@@ -22,7 +25,11 @@ const ContentBlock = ({ userData }: IContentBlock) => {
       <p className="mx-6 lg:ml-48 my-5 text-lm-grey dark:text-dm-white">
         {userData?.bio}
       </p>
-      <Stats />
+      <Stats
+        repos={userData?.public_repos}
+        followers={userData?.followers}
+        following={userData?.following}
+      />
       <Footer />
     </div>
   );
