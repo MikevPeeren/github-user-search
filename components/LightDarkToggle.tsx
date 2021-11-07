@@ -23,7 +23,7 @@ const LightDarkToggle = () => {
 
   return (
     <div
-      className="flex flex-row justify-center text-lm-blue dark:text-dm-white hover:text-[#222731] dark:hover:text-[#90A4D4] hover:cursor-pointer"
+      className="flex flex-row justify-center text-lm-blue dark:text-dm-white hover:text-[#222731] dark:hover:text-[#90A4D4] hover:cursor-pointer transition ease-in-out duration-700 "
       onClick={() => handleThemeChange()}
     >
       {darkMode ? (

@@ -26,23 +26,13 @@ const SearchBar = () => {
           No results
         </span>
         <button
-          className="rounded-xl text-lm-white dark:text-dm-white font-bold bg-dm-light-blue md:mx-2 mx-1 md:py-3 py-2 md:px-5 px-2 outline-none hover:cursor-pointer hover:bg-dm-light-blue-hover md:text-lg text-xs"
+          className="rounded-xl text-lm-white dark:text-dm-white font-bold bg-dm-light-blue md:mx-2 mx-1 md:py-3 py-2 md:px-5 px-2 outline-none hover:cursor-pointer hover:bg-dm-light-blue-hover md:text-lg text-xs transition ease-in-out duration-700 "
           type="submit"
           onClick={handleSubmit}
         >
           Search
         </button>
       </div>
-      {/* <div>
-        <span className="md:ml-2 ml-1 text-error hidden">No results</span>
-        <button
-          className="rounded-xl text-lm-white dark:text-dm-white font-bold bg-dm-light-blue md:mx-2 mr-1 md:py-3 py-2 md:px-5 px-2 outline-none hover:cursor-pointer hover:bg-dm-light-blue-hover"
-          type="submit"
-          onClick={handleSubmit}
-        >
-          Search
-        </button>
-      </div> */}
     </div>
   );
 };
