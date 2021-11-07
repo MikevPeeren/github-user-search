@@ -3,10 +3,11 @@ import Head from "next/head";
 
 import LightDarkToggle from "../components/LightDarkToggle";
 import SearchBar from "../components/SearchBar";
+import ContentBlock from "../components/ContentBlock";
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-lm-light-grey dark:bg-dm-black-blue min-w-screen min-h-screen">
+    <div className="bg-lm-light-grey dark:bg-dm-black-blue">
       <Head>
         <title>Github User Search</title>
         <meta
@@ -16,15 +17,17 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon-32x32.png" />
       </Head>
 
-      <main className="min-h-screen flex flex-col justify-center items-center">
-        <div className="flex flex-row justify-between items-center lg:w-[730px] md:w-[573px]">
+      <main className="min-w-screen min-h-screen flex flex-col justify-center items-center">
+        <div className="flex flex-row justify-between items-center lg:w-6/12 md:w-8/12 w-11/12 md:mt-0 mt-4">
           <h1 className="dark:text-dm-white">devfinder</h1>
           <LightDarkToggle />
         </div>
-        <div className="lg:w-[730px] md:w-[573px] mt-10">
+        <div className="mt-10 lg:w-6/12 md:w-8/12 sm:w-8/12 w-11/12">
           <SearchBar />
         </div>
-        {/* Body component */}
+        <div className="mt-10 lg:w-6/12 md:w-8/12 sm:w-8/12 w-11/12 h-4/6 ">
+          <ContentBlock />
+        </div>
       </main>
 
       <footer></footer>
