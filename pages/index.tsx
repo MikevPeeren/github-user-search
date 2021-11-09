@@ -50,8 +50,6 @@ const Home: NextPage = () => {
           <ContentBlock userData={userData} />
         </div>
       </main>
-
-      <footer></footer>
     </div>
   );
 };
