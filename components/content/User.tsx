@@ -6,14 +6,16 @@ interface IUser {
   name: string;
   login: string;
   joined: string;
+  avatarUrl: string;
 }
 
-const User = ({ name, login, joined }: IUser) => {
+const User = ({ name, login, joined, avatarUrl }: IUser) => {
+  console.log(avatarUrl);
   return (
     <div className="flex flex-row items-center mt-10 ml-6">
       <Image
         className="rounded-full"
-        src={OCTOCAT}
+        src={avatarUrl ? avatarUrl : OCTOCAT}
         width={117}
         height={117}
         alt="Picture of the author"

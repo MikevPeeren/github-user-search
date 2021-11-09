@@ -15,18 +15,20 @@ interface IContentBlock {
     blog: string;
     location: string;
     twitter_username: string;
+    avatar_url: string;
   };
 }
 
 const ContentBlock = ({ userData }: IContentBlock) => {
   return (
-    <div className="rounded-xl flex flex-col md:justify-between bg-lm-white dark:bg-dm-blue shadow-xl">
+    <div className="rounded-xl flex flex-col md:justify-between bg-lm-white dark:bg-dm-blue shadow-xl mb-6 md:mb-0">
       <User
         name={userData?.name}
         login={userData?.login}
         joined={userData?.created_at}
+        avatarUrl={userData?.avatar_url}
       />
-      <p className="mx-6 lg:ml-48 my-5 text-lm-grey dark:text-dm-white">
+      <p className="mx-6 xl:ml-48 lg:ml-36 my-5 text-lm-grey dark:text-dm-white">
         {userData?.bio}
       </p>
       <Stats
