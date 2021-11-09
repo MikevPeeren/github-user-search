@@ -40,7 +40,7 @@ const Home: NextPage = () => {
 
       <main className="min-w-screen min-h-screen flex flex-col justify-center items-center">
         <div className="flex flex-row justify-between items-center 2xl:w-4/12 lg:w-6/12 md:w-8/12 w-11/12 md:mt-0 mt-4">
-          <h1 className="dark:text-dm-white">devfinder</h1>
+          <header className="dark:text-dm-white">devfinder</header>
           <LightDarkToggle />
         </div>
         <div className="mt-10 2xl:w-4/12 lg:w-6/12 md:w-8/12 sm:w-8/12 w-11/12">

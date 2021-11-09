@@ -29,9 +29,9 @@ const SearchBar = ({ handleSubmit, noUser }: ISearchBar) => {
           placeholder="Search Github username..."
         />
         {noUser && (
-          <span className="md:mx-2 mx-1 text-error md:text-lg text-xs">
+          <p className="md:mx-2 mx-1 text-error md:text-lg text-xs">
             No results
-          </span>
+          </p>
         )}
         <button
           className="rounded-xl text-lm-white dark:text-dm-white font-bold bg-dm-light-blue md:mx-2 mx-1 md:py-3 py-2 md:px-5 px-2 outline-none hover:cursor-pointer hover:bg-dm-light-blue-hover md:text-lg text-xs transition ease-in-out duration-700"
