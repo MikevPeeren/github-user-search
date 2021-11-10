@@ -36,6 +36,7 @@ const SearchBar = ({ handleSubmit, noUser }: ISearchBar) => {
         <button
           className="rounded-xl text-lm-white dark:text-dm-white font-bold bg-dm-light-blue md:mx-2 mx-1 md:py-3 py-2 md:px-5 px-2 outline-none hover:cursor-pointer hover:bg-dm-light-blue-hover md:text-lg text-xs transition ease-in-out duration-700"
           type="submit"
+          aria-label="github user search trigger"
           onClick={handleSubmitClick}
         >
           Search

@@ -10,31 +10,34 @@ interface IUser {
 }
 
 const User = ({ name, login, joined, avatarUrl }: IUser) => {
-  console.log(avatarUrl);
   return (
-    <div className="flex flex-row items-center mt-10 ml-6">
-      <Image
-        className="rounded-full"
-        src={avatarUrl ? avatarUrl : OCTOCAT}
-        width={117}
-        height={117}
-        alt="Picture of the author"
-      />
-      <div className="flex lg:flex-row flex-col justify-around lg:justify-between items-baseline mx-10 px-2">
-        <div className="flex flex-col">
-          <h1 className="text-lm-dark-grey dark:text-dm-white">{name}</h1>
-          <h3 className="text-lm-light-blue dark:text-dm-light-blue py-1">
-            @{login}
+    <div className="flex flex-row items-center w-full mt-10">
+      <div className="flex flex-row items-start pl-4 lg:w-2/6 md:w-1/6 sm:w-1/6 w-full">
+        <Image
+          className="rounded-full"
+          src={avatarUrl ? avatarUrl : OCTOCAT}
+          width={117}
+          height={117}
+          alt="Picture of the author"
+        />
+      </div>
+      <div className="lg:w-5/6 md:w-5/6 sm:w-full w-5/6 mx-6 md:mx-8 pl-[0.5rem]">
+        <div className="flex lg:flex-row flex-col justify-around lg:justify-between items-start">
+          <div className="flex flex-col">
+            <h1 className="text-lm-dark-grey dark:text-dm-white">{name}</h1>
+            <h2 className="text-lm-light-blue dark:text-dm-light-blue py-1">
+              @{login}
+            </h2>
+          </div>
+          <h3 className="text-lm-grey dark:text-dm-white lg:ml-32">
+            Joined{" "}
+            {new Date(joined).toLocaleString("en-US", {
+              weekday: "short",
+              day: "numeric",
+              year: "numeric",
+            })}
           </h3>
         </div>
-        <h3 className="text-lm-grey dark:text-dm-white lg:ml-32">
-          Joined{" "}
-          {new Date(joined).toLocaleString("en-US", {
-            weekday: "short",
-            day: "numeric",
-            year: "numeric",
-          })}
-        </h3>
       </div>
     </div>
   );

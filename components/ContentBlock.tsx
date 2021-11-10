@@ -21,27 +21,36 @@ interface IContentBlock {
 
 const ContentBlock = ({ userData }: IContentBlock) => {
   return (
-    <div className="rounded-xl flex flex-col md:justify-between bg-lm-white dark:bg-dm-blue shadow-xl mb-6 md:mb-0">
+    <div className="rounded-xl flex flex-col md:justify-between lg:items-end md:items-start sm:items-start items-start bg-lm-white dark:bg-dm-blue shadow-xl mb-6 md:mb-0">
       <User
         name={userData?.name}
         login={userData?.login}
         joined={userData?.created_at}
         avatarUrl={userData?.avatar_url}
       />
-      <p className="mx-6 xl:ml-48 lg:ml-36 my-5 text-lm-grey dark:text-dm-white">
-        {userData?.bio}
-      </p>
-      <Stats
-        repos={userData?.public_repos}
-        followers={userData?.followers}
-        following={userData?.following}
-      />
-      <Footer
-        blog={userData?.blog}
-        location={userData?.location}
-        twitter={userData?.twitter_username}
-        company={userData?.company}
-      />
+      <div className="flex flex-row items-end w-full">
+        <div className="mt-10 ml-4 lg:w-2/6 md:invisible md:0/6 sm:w-full w-0/6" />
+        <p className="mx-6 md:mx-8 lg:w-5/6 md:w-5/6 sm:w-full w-5/6 my-5 text-lm-grey dark:text-dm-white">
+          {userData?.bio ? userData?.bio : "No Bio found"}
+        </p>
+      </div>
+      <div className="flex flex-row items-end w-full">
+        <div className="mt-10 ml-4 lg:w-2/6 md:invisible md:0/6 sm:w-full w-0/6" />
+        <Stats
+          repos={userData?.public_repos}
+          followers={userData?.followers}
+          following={userData?.following}
+        />
+      </div>
+      <div className="flex flex-row items-end w-full">
+        <div className="mt-10 ml-4 lg:w-2/6 md:invisible md:0/6 sm:w-full w-0/6" />
+        <Footer
+          blog={userData?.blog}
+          location={userData?.location}
+          twitter={userData?.twitter_username}
+          company={userData?.company}
+        />
+      </div>
     </div>
   );
 };

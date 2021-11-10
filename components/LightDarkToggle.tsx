@@ -34,6 +34,7 @@ const LightDarkToggle = () => {
   return (
     <button
       type="button"
+      aria-label="light dark toggle"
       className="flex flex-row justify-center text-lm-blue dark:text-dm-white hover:text-[#222731] dark:hover:text-[#90A4D4] hover:cursor-pointer transition ease-in-out duration-700 "
       onClick={() => handleThemeChange()}
     >
