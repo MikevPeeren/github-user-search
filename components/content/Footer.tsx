@@ -33,7 +33,7 @@ const Footer = ({ blog, location, twitter, company }: IFooter) => {
           <svg
             className="fill-current"
             aria-hidden="true"
-            height="18"
+            height="20"
             width="20"
             xmlns="http://www.w3.org/2000/svg"
           >

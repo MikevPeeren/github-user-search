@@ -12,7 +12,7 @@ interface IUser {
 const User = ({ name, login, joined, avatarUrl }: IUser) => {
   return (
     <div className="flex flex-row items-center w-full mt-10">
-      <div className="flex flex-row items-start pl-4 lg:w-2/6 md:w-1/6 sm:w-1/6 w-full">
+      <div className="flex flex-row items-start pl-4 lg:w-2/6 md:w-2/6 sm:w-2/6 w-full">
         <Image
           className="rounded-full"
           src={avatarUrl ? avatarUrl : OCTOCAT}
@@ -24,9 +24,11 @@ const User = ({ name, login, joined, avatarUrl }: IUser) => {
       <div className="lg:w-5/6 md:w-5/6 sm:w-full w-5/6 mx-6 md:mx-8 pl-[0.5rem]">
         <div className="flex lg:flex-row flex-col justify-around lg:justify-between items-start">
           <div className="flex flex-col">
-            <h1 className="text-lm-dark-grey dark:text-dm-white">{name}</h1>
+            <h1 className="text-lm-dark-grey dark:text-dm-white">
+              {name ? name : "The Octocat"}
+            </h1>
             <h2 className="text-lm-light-blue dark:text-dm-light-blue py-1">
-              @{login}
+              @{login ? login : "octocat"}
             </h2>
           </div>
           <h3 className="text-lm-grey dark:text-dm-white lg:ml-32">
@@ -37,7 +39,7 @@ const User = ({ name, login, joined, avatarUrl }: IUser) => {
                   day: "numeric",
                   year: "numeric",
                 })
-              : ""}
+              : "25 Tue 2011"}
           </h3>
         </div>
       </div>

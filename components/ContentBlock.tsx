@@ -31,13 +31,13 @@ const ContentBlock = ({ userData }: IContentBlock) => {
         avatarUrl={userData?.avatar_url}
       />
       <div className="flex flex-row items-end w-full">
-        <div className="mt-10 ml-4 lg:w-2/6 md:invisible md:0/6 sm:w-full w-0/6" />
-        <p className="mx-6 md:mx-8 lg:w-5/6 md:w-5/6 sm:w-full w-5/6 my-5 text-lm-grey dark:text-dm-white">
+        <div className="mt-10 ml-4 lg:w-2/6 md:0/6 w-0/6" />
+        <p className="mx-6 md:mx-8 lg:w-5/6 md:w-5/6 w-5/6 my-5 text-lm-grey dark:text-dm-white">
           {userData?.bio ? userData?.bio : "No Bio found"}
         </p>
       </div>
       <div className="flex flex-row items-end w-full">
-        <div className="mt-10 ml-4 lg:w-2/6 md:invisible md:0/6 sm:w-full w-0/6" />
+        <div className="mt-10 ml-4 lg:w-2/6 md:1/6 w-0/6" />
         <Stats
           repos={userData?.public_repos}
           followers={userData?.followers}
@@ -45,7 +45,7 @@ const ContentBlock = ({ userData }: IContentBlock) => {
         />
       </div>
       <div className="flex flex-row items-end w-full">
-        <div className="mt-10 ml-4 lg:w-2/6 md:invisible md:0/6 sm:w-full w-0/6" />
+        <div className="mt-10 ml-4 lg:w-2/6 md:invisible md:0/6 w-0/6" />
         <Footer
           blog={userData?.blog}
           location={userData?.location}
