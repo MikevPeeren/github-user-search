@@ -13,6 +13,7 @@ const SearchBar = ({ handleSubmit, noUser }: ISearchBar) => {
 
   const handleSubmitClick = () => {
     handleSubmit(
+      //@ts-ignore
       textInput?.current?.value ? textInput?.current?.value : "undefined"
     );
   };
