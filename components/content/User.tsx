@@ -3,10 +3,10 @@ import Image from "next/image";
 import OCTOCAT from "../../public/theoctocat.png";
 
 interface IUser {
-  name: string;
-  login: string;
-  joined: string;
-  avatarUrl: string;
+  name?: string;
+  login?: string;
+  joined?: string;
+  avatarUrl?: string;
 }
 
 const User = ({ name, login, joined, avatarUrl }: IUser) => {
@@ -31,11 +31,13 @@ const User = ({ name, login, joined, avatarUrl }: IUser) => {
           </div>
           <h3 className="text-lm-grey dark:text-dm-white lg:ml-32">
             Joined{" "}
-            {new Date(joined).toLocaleString("en-US", {
-              weekday: "short",
-              day: "numeric",
-              year: "numeric",
-            })}
+            {joined
+              ? new Date(joined).toLocaleString("en-US", {
+                  weekday: "short",
+                  day: "numeric",
+                  year: "numeric",
+                })
+              : ""}
           </h3>
         </div>
       </div>

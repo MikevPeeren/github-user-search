@@ -47,7 +47,7 @@ const Home: NextPage = () => {
           <SearchBar handleSubmit={handleSubmit} noUser={noUser} />
         </div>
         <div className="mt-10 2xl:w-4/12 lg:w-6/12 md:w-8/12 sm:w-8/12 w-11/12 h-4/6">
-          {userData && <ContentBlock userData={userData} />}
+          <ContentBlock userData={userData} />
         </div>
       </main>
     </div>

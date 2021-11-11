@@ -1,7 +1,7 @@
 interface IStats {
-  repos: string;
-  followers: string;
-  following: string;
+  repos?: string;
+  followers?: string;
+  following?: string;
 }
 
 const Stats = ({ repos, followers, following }: IStats) => {

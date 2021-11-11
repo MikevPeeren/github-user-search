@@ -1,8 +1,8 @@
 interface IFooter {
-  blog: string;
-  location: string;
-  twitter: string;
-  company: string;
+  blog?: string;
+  location?: string;
+  twitter?: string;
+  company?: string;
 }
 
 const Footer = ({ blog, location, twitter, company }: IFooter) => {

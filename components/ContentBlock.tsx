@@ -3,20 +3,22 @@ import Stats from "./content/Stats";
 import Footer from "./content/Footer";
 
 interface IContentBlock {
-  userData: {
-    name: string;
-    login: string;
-    created_at: string;
-    bio: string;
-    public_repos: string;
-    followers: string;
-    following: string;
-    company: string;
-    blog: string;
-    location: string;
-    twitter_username: string;
-    avatar_url: string;
-  };
+  userData:
+    | {
+        name: string;
+        login: string;
+        created_at: string;
+        bio: string;
+        public_repos: string;
+        followers: string;
+        following: string;
+        company: string;
+        blog: string;
+        location: string;
+        twitter_username: string;
+        avatar_url: string;
+      }
+    | undefined;
 }
 
 const ContentBlock = ({ userData }: IContentBlock) => {
