@@ -5,8 +5,12 @@
   var classNameLight = "light";
 
   function setClassOnDocumentBody(darkMode) {
-    document.body.classList.add(darkMode ? classNameDark : classNameLight);
-    document.body.classList.remove(darkMode ? classNameLight : classNameDark);
+    if (typeof document !== "undefined") {
+      document?.body?.classList.add(darkMode ? classNameDark : classNameLight);
+      document?.body?.classList.remove(
+        darkMode ? classNameLight : classNameDark
+      );
+    }
   }
 
   var preferDarkQuery = "(prefers-color-scheme: dark)";
