@@ -45,15 +45,15 @@ h1 {
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 13px;
 
   @media screen and (max-width: 600px) {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 11px;
+    line-height: 17px;
   }
 
-  line-height: 33px;
-  font-weight: bold;
+  line-height: 20px;
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -97,19 +97,6 @@ h5 {
 }
 
 .customText {
-  font-size: 13px;
-
-  @media screen and (max-width: 600px) {
-    font-size: 11px;
-    line-height: 17px;
-  }
-
-  line-height: 20px;
-  font-weight: normal;
-  font-style: normal;
-}
-
-.aTag {
   font-size: 13px;
 
   @media screen and (max-width: 600px) {

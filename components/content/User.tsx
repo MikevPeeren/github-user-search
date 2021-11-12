@@ -27,9 +27,9 @@ const User = ({ name, login, joined, avatarUrl }: IUser) => {
             <h1 className="text-lm-dark-grey dark:text-dm-white">
               {name ? name : "The Octocat"}
             </h1>
-            <p className="text-lm-light-blue dark:text-dm-light-blue py-1 aTag">
+            <h2 className="text-lm-light-blue dark:text-dm-light-blue py-1">
               @{login ? login : "octocat"}
-            </p>
+            </h2>
           </div>
           <h3 className="text-lm-grey dark:text-dm-white lg:ml-32">
             Joined{" "}
