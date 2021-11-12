@@ -45,6 +45,19 @@ h1 {
 }
 
 h2 {
+  font-size: 26px;
+
+  @media screen and (max-width: 600px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  line-height: 38px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.atText {
   font-size: 13px;
 
   @media screen and (max-width: 600px) {
@@ -70,7 +83,8 @@ h3 {
   font-style: normal;
 }
 
-h4 {
+h4,
+dt {
   font-size: 13px;
 
   @media screen and (max-width: 600px) {
@@ -83,7 +97,8 @@ h4 {
   font-style: normal;
 }
 
-h5 {
+h5,
+dd {
   font-size: 22px;
 
   @media screen and (max-width: 600px) {

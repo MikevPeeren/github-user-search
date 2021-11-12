@@ -24,14 +24,17 @@ const User = ({ name, login, joined, avatarUrl }: IUser) => {
       <div className="lg:w-5/6 md:w-5/6 sm:w-full w-5/6 mx-6 md:mx-8 pl-[0.5rem]">
         <div className="flex lg:flex-row flex-col justify-around lg:justify-between items-start">
           <div className="flex flex-col">
-            <h1 className="text-lm-dark-grey dark:text-dm-white">
+            <h2 className="text-lm-dark-grey dark:text-dm-white">
               {name ? name : "The Octocat"}
-            </h1>
-            <h2 className="text-lm-light-blue dark:text-dm-light-blue py-1">
-              @{login ? login : "octocat"}
             </h2>
+            <a
+              href={`https://github.com/${login ? login : "octocat"}`}
+              className="text-lm-light-blue dark:text-dm-light-blue py-1 atText"
+            >
+              @{login ? login : "octocat"}
+            </a>
           </div>
-          <h3 className="text-lm-grey dark:text-dm-white lg:ml-32">
+          <span className="text-lm-grey dark:text-dm-white lg:ml-32">
             Joined{" "}
             {joined
               ? new Date(joined).toLocaleString("en-US", {
@@ -40,7 +43,7 @@ const User = ({ name, login, joined, avatarUrl }: IUser) => {
                   year: "numeric",
                 })
               : "25 Tue 2011"}
-          </h3>
+          </span>
         </div>
       </div>
     </div>

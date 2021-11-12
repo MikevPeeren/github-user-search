@@ -39,7 +39,13 @@ const Footer = ({ blog, location, twitter, company }: IFooter) => {
           >
             <path d="M20 2.799a8.549 8.549 0 01-2.363.647 4.077 4.077 0 001.804-2.266 8.194 8.194 0 01-2.6.993A4.099 4.099 0 009.75 4.977c0 .324.027.637.095.934-3.409-.166-6.425-1.8-8.452-4.288a4.128 4.128 0 00-.56 2.072c0 1.42.73 2.679 1.82 3.408A4.05 4.05 0 01.8 6.598v.045a4.119 4.119 0 003.285 4.028 4.092 4.092 0 01-1.075.135c-.263 0-.528-.015-.776-.07.531 1.624 2.038 2.818 3.831 2.857A8.239 8.239 0 01.981 15.34 7.68 7.68 0 010 15.285a11.543 11.543 0 006.29 1.84c7.545 0 11.67-6.25 11.67-11.667 0-.182-.006-.357-.015-.53A8.18 8.18 0 0020 2.798z" />
           </svg>
-          <p className="px-2">{twitter ? twitter : "Not Available"}</p>
+          <a
+            href={twitter ? twitter : "#"}
+            aria-label="twitter url"
+            className="px-2 hover:underline hover:cursor-pointer transition ease-in-out duration-700 overflow-ellipsis overflow-hidden"
+          >
+            {twitter ? twitter : "Not Available"}
+          </a>
         </div>
       </div>
       <div className="grid gap-x-6 md:grid-cols-2 grid-cols-1">
@@ -60,13 +66,13 @@ const Footer = ({ blog, location, twitter, company }: IFooter) => {
               <path d="M13.439 13.75a.401.401 0 00.006-.003c.659-1.204.788-2.586.48-3.933l-.002.002-.001-.001a5.434 5.434 0 00-2.19-3.124.3.3 0 00-.333.015c-.553.448-1.095 1.021-1.452 1.754a.243.243 0 00.096.317c.415.24.79.593 1.04 1.061h.001c.196.33.388.958.263 1.632-.116.894-1.019 1.714-1.736 2.453-.546.559-1.935 1.974-2.49 2.542a2.6 2.6 0 01-3.666.037 2.6 2.6 0 01-.038-3.666l1.521-1.564A.266.266 0 005 11.004c-.338-1.036-.43-2.432-.217-3.51.006-.03-.031-.049-.053-.027l-3.179 3.245c-2.083 2.126-2.066 5.588.04 7.693 2.125 2.083 5.57 2.048 7.653-.078.723-.81 3.821-3.678 4.195-4.577z" />
             </g>
           </svg>
-          <button
-            type="button"
+          <a
+            href={blog ? blog : "#"}
             aria-label="website url"
             className="px-2 hover:underline hover:cursor-pointer transition ease-in-out duration-700 overflow-ellipsis overflow-hidden"
           >
             {blog ? blog : "Not Available"}
-          </button>
+          </a>
         </div>
         <div
           className={`flex items-start py-2 ${
