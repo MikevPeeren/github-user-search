@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution]()
+- Solution URL: [Solution](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6/hub/nextjs-tailwindcss-github-search-KDpt1lTPA)
 - Live Site URL: [Website](https://github-user-search-tau.vercel.app/)
 
 ## My process
