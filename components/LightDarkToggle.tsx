@@ -40,7 +40,7 @@ const LightDarkToggle = () => {
     >
       {darkMode ? (
         <>
-          <h4 className="font-bold mx-4">Light</h4>
+          <span className="font-bold mx-4 customText">Light</span>
           <svg
             role="img"
             className="fill-current"
