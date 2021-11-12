@@ -56,7 +56,7 @@ const LightDarkToggle = () => {
         </>
       ) : (
         <>
-          <h4 className="font-bold mx-4">Dark</h4>
+          <span className="font-bold mx-4 customText">Dark</span>
           <svg
             role="img"
             className="fill-current"
