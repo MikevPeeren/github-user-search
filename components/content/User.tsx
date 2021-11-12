@@ -12,7 +12,7 @@ interface IUser {
 const User = ({ name, login, joined, avatarUrl }: IUser) => {
   return (
     <div className="flex flex-row items-center w-full mt-10">
-      <div className="flex flex-row items-start pl-4 lg:w-2/6 md:w-2/6 sm:w-2/6 w-full">
+      <div className="flex flex-row md:flex-row-reverse items-start pl-4 2xl:w-1/5 xl:w-1/5 lg:w-2/6 md:w-2/6 sm:w-2/6">
         <Image
           className="rounded-full"
           src={avatarUrl ? avatarUrl : OCTOCAT}

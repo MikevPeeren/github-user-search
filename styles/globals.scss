@@ -109,6 +109,14 @@ p {
   font-weight: 400;
 }
 
+button {
+  font-size: 15px;
+
+  @media screen and (max-width: 600px) {
+    font-size: 13px;
+  }
+}
+
 input {
   font-size: 18px;
 

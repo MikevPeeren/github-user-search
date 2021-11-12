@@ -7,10 +7,10 @@ interface IFooter {
 
 const Footer = ({ blog, location, twitter, company }: IFooter) => {
   return (
-    <footer className="grid grid-cols-1 mx-6 mb-6 md:mx-8 lg:w-5/6 md:w-5/6 w-5/6">
+    <footer className="mx-2 mb-6 lg:mx-8 lg:w-5/6 md:w-full w-5/6">
       <div className="grid gap-x-6 md:grid-cols-2 grid-cols-1">
         <div
-          className={`flex items-start py-1 ${
+          className={`flex items-start py-2 ${
             location ? "text-lm-blue dark:text-dm-white" : "text-lm-grey"
           }`}
         >
@@ -26,7 +26,7 @@ const Footer = ({ blog, location, twitter, company }: IFooter) => {
           <p className="px-2">{location ? location : "Not Available"}</p>
         </div>
         <div
-          className={`flex items-start py-1 ${
+          className={`flex items-start py-2 ${
             twitter ? "text-lm-blue dark:text-dm-white" : "text-lm-grey"
           }`}
         >
@@ -44,12 +44,12 @@ const Footer = ({ blog, location, twitter, company }: IFooter) => {
       </div>
       <div className="grid gap-x-6 md:grid-cols-2 grid-cols-1">
         <div
-          className={`flex items-start py-1 ${
+          className={`flex items-start py-2 ${
             blog ? "text-lm-blue dark:text-dm-white" : "text-lm-grey"
           }`}
         >
           <svg
-            className="fill-current"
+            className="fill-current overflow-visible"
             aria-hidden="true"
             height="20"
             width="20"
@@ -69,7 +69,7 @@ const Footer = ({ blog, location, twitter, company }: IFooter) => {
           </button>
         </div>
         <div
-          className={`flex items-start py-1 ${
+          className={`flex items-start py-2 ${
             company ? "text-lm-blue dark:text-dm-white" : "text-lm-grey"
           }`}
         >
