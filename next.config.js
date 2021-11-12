@@ -9,4 +9,7 @@ module.exports = {
   images: {
     domains: ["avatars.githubusercontent.com"],
   },
+  env: {
+    noflash: fs.readFileSync("/noflash.js").toString(),
+  },
 };

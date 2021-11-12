@@ -15,6 +15,10 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
             rel="stylesheet"
           />
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{ __html: process.env.noflash }}
+          />
         </Head>
         <body>
           <Main />
