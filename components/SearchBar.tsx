@@ -26,7 +26,7 @@ const SearchBar = ({ handleSubmit, noUser }: ISearchBar) => {
         <input
           className="flex-grow md:pl-4 pl-1 bg-transparent dark:text-dm-white md:text-lg text-xs font-normal placeholder-lm-blue dark:placeholder-dm-white outline-none hover:cursor-pointer overflow-ellipsis sm:max-w-none max-w-[15ch]"
           type="text"
-          maxlength="30"
+          maxLength={30}
           ref={textInput}
           placeholder="Search Github username..."
         />
