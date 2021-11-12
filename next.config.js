@@ -11,6 +11,6 @@ module.exports = {
     domains: ["avatars.githubusercontent.com"],
   },
   env: {
-    noflash: fs.readFileSync("/noflash.js").toString(),
+    noflash: fs.readFileSync("public/noflash.js").toString(),
   },
 };

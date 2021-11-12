@@ -17,6 +17,7 @@ class MyDocument extends Document {
           />
           <script
             type="text/javascript"
+            // @ts-ignore
             dangerouslySetInnerHTML={{ __html: process.env.noflash }}
           />
         </Head>
